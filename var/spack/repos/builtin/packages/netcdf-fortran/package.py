@@ -71,6 +71,10 @@ class NetcdfFortran(AutotoolsPackage):
     def configure_args(self):
         config_args = []
 
+        if '+pic' in self.spec:
+            config_args.append('FCFLAGS_f90=%s' % self.compiler.pic_flag)
+            config_args.append('FCFLAGS=%s' % self.compiler.pic_flag)
+
         if '+mpi' in self.spec:
             config_args.append('CC=%s' % self.spec['mpi'].mpicc)
             config_args.append('FC=%s' % self.spec['mpi'].mpifc)

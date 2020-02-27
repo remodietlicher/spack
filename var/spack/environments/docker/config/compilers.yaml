@@ -1,6 +1,6 @@
 compilers::
 - compiler:
-    spec: pgi@19.10-hybrid-gcc-8.3.0
+    spec: pgi@19.10-hybrid-gcc-7.4.0
     paths:
       cc: gcc
       cxx: g++
@@ -26,7 +26,7 @@ compilers::
     extra_rpaths: []
     operating_system: ubuntu18.04
 - compiler:
-    spec: gcc@8.3.0
+    spec: gcc@7.4.0
     paths:
       cc: gcc
       cxx: gc++

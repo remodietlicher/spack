@@ -13,6 +13,19 @@ compilers::
     extra_rpaths: []
     operating_system: ubuntu18.04
 - compiler:
+    spec: pgi@19.10-hybrid-gcc-8.3.0
+    paths:
+      cc: gcc
+      cxx: g++
+      f77: pgfortran
+      fc: pgfortran
+    flags: {}
+    target: x86_64
+    modules: [pgi/19.10, gcc/8.3.0]
+    environment: {}
+    extra_rpaths: []
+    operating_system: ubuntu18.04
+- compiler:
     spec: pgi@19.10
     paths:
       cc: pgcc
@@ -35,6 +48,19 @@ compilers::
     flags: {}
     target: x86_64
     modules: []
+    environment: {}
+    extra_rpaths: []
+    operating_system: ubuntu18.04
+- compiler:
+    spec: gcc@8.3.0
+    paths:
+      cc: gcc
+      cxx: gc++
+      f77: gfortran
+      fc: gfortran
+    flags: {}
+    target: x86_64
+    modules: [gcc/8.3.0]
     environment: {}
     extra_rpaths: []
     operating_system: ubuntu18.04

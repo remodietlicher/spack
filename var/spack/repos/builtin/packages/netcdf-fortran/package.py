@@ -40,6 +40,10 @@ class NetcdfFortran(AutotoolsPackage):
     # derived from https://github.com/Unidata/netcdf-fortran/pull/211
     patch('no_parallel_build.patch', when='@4.5.2')
 
+    # netcdf-fortran specifies FCFLAGS, FCFLAGS_f90 and FFLAGS. Only
+    # FFLAGS are set by spack. This is a problem for pgi
+    patch('pgi.patch', when='@4.5.2%pgi')
+
     def flag_handler(self, name, flags):
         if name in ['cflags', 'fflags'] and '+pic' in self.spec:
             flags.append(self.compiler.pic_flag)

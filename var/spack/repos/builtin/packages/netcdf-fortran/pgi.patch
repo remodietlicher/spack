@@ -1,0 +1,15 @@
+diff --git a/fortran/Makefile.in b/fortran/Makefile.in
+index 51eab32..7122785 100644
+--- a/fortran/Makefile.in
++++ b/fortran/Makefile.in
+@@ -393,8 +393,8 @@ ENABLE_VALGRIND_sgcheck = @ENABLE_VALGRIND_sgcheck@
+ EXEEXT = @EXEEXT@
+ F77 = @F77@
+ FC = @FC@
+-FCFLAGS = @FCFLAGS@
+-FCFLAGS_f90 = @FCFLAGS_f90@
++FCFLAGS = @FFLAGS@
++FCFLAGS_f90 = @FFLAGS@
+ FFLAGS = @FFLAGS@
+ FGREP = @FGREP@
+ GREP = @GREP@
